@@ -10,7 +10,14 @@ import com.it.me.AppConfig;
 public class Test {
     public static void main(String[] args) {
         MyApplictionContext context = new MyApplictionContext(AppConfig.class);
-        Object userService = context.getBean("userService");
+        System.out.println("单例userService:");
+        System.out.println(context.getBean("userService"));
+        System.out.println(context.getBean("userService"));
+        System.out.println(context.getBean("userService"));
+        System.out.println("原型studentService:");
+        System.out.println(context.getBean("studentService"));
+        System.out.println(context.getBean("studentService"));
+        System.out.println(context.getBean("studentService"));
 
     }
 }
